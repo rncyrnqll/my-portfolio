@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- custom css-->
+     <link rel="stylesheet" href="css/style.css">
+     <!-- emailjs script  -->
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+        emailjs.init({
+        publicKey: "JrmuqLJFZl5-FjqKl",
+        });
+        })();
+</script>
+</head>
+
+<body>
+    
+    <!-- header design -->
+     <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+     </header>
+
+          <!--  home section design -->
+            <section class="home" id="home">
+                <div class="home-content">
+                    <h3>Hello, It's Me</h3>
+                    <h1>Lorencimel Gañas Ronquillo</h1>
+                    <h3><span class="multiple-text"></span></h3>
+                    <!--<p>I'm a beginner Python developer currently working as a Data Processing Analyst II. I'm passionate about learning Python, building beginner-friendly projects, and continuously improving my programming skills. Outside of work, I create gaming content, producing montages and gameplay highlights with creative editing. I'm always eager to learn, take on new challenges, and grow as a developer.</p>-->
+                   <div class="social-media">
+                    <a href="https://www.facebook.com/rencyronquillo"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="https://www.instagram.com/rncyrnqll/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.linkedin.com/in/rncyrnqll"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://github.com/rncyrnqll"><i class='bx bxl-github'></i></a>
+                   </div>
+                   <a href="cv/LRonquillo_CV.pdf" class="btn" download="">Download CV</a>
+                </div>
+
+                <div class="home-img">
+                    <img src="home/home.png" alt="">
+                </div>
+            </section>
+
+           <!-- about section design -->
+            <section class="about" id="about">
+                <div class="about-img">
+                    <img src="images/about.png" alt="">
+                </div>
+
+                <div class="about-content">
+                    <h2 class="heading">About <span>Me</span></h2>
+                    <!--<h3>Python Developer</h3>-->
+                    <p>I'm a beginner Python developer currently working as a Data Processing Analyst II. I'm passionate about learning Python, building beginner-friendly projects, and continuously improving my programming skills. Outside of work, I create gaming content, producing montages and gameplay highlights with creative editing. I'm always eager to learn, take on new challenges, and grow as a developer.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </section>
+
+            <!-- services section design -->
+             <section class="services" id="services">
+                <h2 class="heading">Our <span>Services</span></h2>
+
+                <!-- web development -->
+                <div class="services-container">
+                    <div class="services-box">
+                        <i class='bx bx-code-alt'></i>
+                        <h3>Web Development</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sed fugiat esse aliquid voluptatum blanditiis incidunt, tenetur doloremque? Molestiae doloribus id fugiat sed sunt quae cupiditate magni. Deleniti, ullam reiciendis?</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+
+                <!-- graphics design -->
+                    <div class="services-box">
+                        <i class='bx bx-paint-roll' ></i>
+                        <h3>Graphic Design</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sed fugiat esse aliquid voluptatum blanditiis incidunt, tenetur doloremque? Molestiae doloribus id fugiat sed sunt quae cupiditate magni. Deleniti, ullam reiciendis?</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                
+                <!-- video editing -->
+                    <div class="services-box">
+                        <i class='bx bx-video'></i>
+                        <h3>Video Editing</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sed fugiat esse aliquid voluptatum blanditiis incidunt, tenetur doloremque? Molestiae doloribus id fugiat sed sunt quae cupiditate magni. Deleniti, ullam reiciendis?</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+             </section>
+
+             <!-- porfolio section design -->
+             <section class="portfolio" id="portfolio">
+                <h2 class="heading">Latest <span>Project</span></h2>
+
+                <div class="portfolio-container">
+                    <div class="portfolio-box">
+                        <img src="images/qr-scan.png" alt="">
+                        <div class="portfolio-layer">
+                            <h4>QR Code Generator</h4>
+                            <!--<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>-->
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-box">
+                        <img src="images/music.png" alt="">
+                        <div class="portfolio-layer">
+                            <h4>Music Player</h4>
+                            <!--<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>-->
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-box">
+                        <img src="images/weather.png" alt="">
+                        <div class="portfolio-layer">
+                            <h4>Weather App</h4>
+                            <!--<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>-->
+                            <a href="#"><i class='bx bx-link-external'></i></a>
+                        </div>
+                    </div>
+                </div>             
+             </section>
+
+             <!-- contact section design  -->
+             <section class="contact" id="contact">
+                <h2 class="heading">Contact <span>Me!</span></h2>
+
+                <form action="#">
+                    <div class="input-box">
+                        <input type="text" id="name" placeholder="Full Name">
+                        <input type="email" id="email" placeholder="Email Address">
+                    </div>
+                    <div class="input-box">
+                        <input type="number" placeholder="Mobile Number">
+                        <input type="text" id="subject" placeholder="Email Subject">
+                    </div>
+                    <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <input type="submit" id="message" onclick="sendMail()" value="Send Message" class="btn">
+                </form>
+             </section>
+
+             <!-- footer design  -->
+              <footer class="footer">
+                <div class="footer-text">
+                    <p>Copyright</p>
+                </div>
+
+                <div class="footer-iconTop">
+                    <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+                </div>
+
+              </footer>
+
+
+              <!-- scroll reveal -->
+              <script src="https://unpkg.com/scrollreveal"></script>
+
+              <!-- typed js  -->
+               <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+             <!-- custom js -->
+              <script src="js/script.js"></script>
+</body>
+
+</html>
