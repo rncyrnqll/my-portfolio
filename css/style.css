@@ -293,7 +293,7 @@ span {
     background: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
-    text-align: center;
+    text-align: left;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
 }
@@ -315,6 +315,28 @@ span {
 .services-box {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
+}
+
+.tools-label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tools-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+}
+
+.tool-tag {
+    background: var(--bg-color);
+    color: var(--main-color);
+    font-size: 1.3rem;
+    padding: .5rem 1.2rem;
+    border-radius: 2rem;
+    border: .1rem solid var(--main-color);
 }
 
 .portfolio {
