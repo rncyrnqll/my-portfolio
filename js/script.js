@@ -105,6 +105,91 @@ function buildTabs() {
 buildTabs();
 
 
+// automation projects gallery data
+const automationProjects = [
+    {
+        title: "AI Email Auto-Responder",
+        link: "https://example.com",
+        images: [
+            "images/zapier-email-responder.png"
+        ]
+    }
+];
+
+let currentAutomationProject = 0;
+let currentAutomationImage = 0;
+
+function loadAutomationProject(projectIndex) {
+    currentAutomationProject = projectIndex;
+    currentAutomationImage = 0;
+    updateAutomationImage();
+
+    // update active tab styling
+    document.querySelectorAll('#automationTabs .gallery-tab').forEach((tab, i) => {
+        tab.classList.toggle('active', i === projectIndex);
+    });
+}
+
+function updateAutomationImage() {
+    let project = automationProjects[currentAutomationProject];
+
+    document.getElementById('automationTitle').textContent = project.title;
+    document.getElementById('automationCounter').textContent =
+        "Image " + (currentAutomationImage + 1) + " of " + project.images.length;
+    document.getElementById('automationMainImg').src = project.images[currentAutomationImage];
+    document.getElementById('automationLink').href = project.link;
+
+    buildAutomationThumbs();
+}
+
+function buildAutomationThumbs() {
+    let thumbsContainer = document.getElementById('automationThumbs');
+    thumbsContainer.innerHTML = "";
+
+    let project = automationProjects[currentAutomationProject];
+
+    project.images.forEach((imageSrc, index) => {
+        let thumb = document.createElement('img');
+        thumb.src = imageSrc;
+        thumb.classList.add('gallery-thumb');
+        thumb.classList.toggle('active', index === currentAutomationImage);
+        thumb.onclick = () => {
+            currentAutomationImage = index;
+            updateAutomationImage();
+        };
+        thumbsContainer.appendChild(thumb);
+    });
+}
+
+function buildAutomationTabs() {
+    let tabsContainer = document.getElementById('automationTabs');
+
+    automationProjects.forEach((project, index) => {
+        let tab = document.createElement('button');
+        tab.classList.add('gallery-tab');
+        tab.textContent = project.title;
+        tab.onclick = () => loadAutomationProject(index);
+        tabsContainer.appendChild(tab);
+    });
+
+    loadAutomationProject(0);
+}
+
+document.getElementById('automationPrev').onclick = () => {
+    let project = automationProjects[currentAutomationProject];
+    currentAutomationImage = (currentAutomationImage - 1 + project.images.length) % project.images.length;
+    updateAutomationImage();
+};
+
+document.getElementById('automationNext').onclick = () => {
+    let project = automationProjects[currentAutomationProject];
+    currentAutomationImage = (currentAutomationImage + 1) % project.images.length;
+    updateAutomationImage();
+};
+
+buildAutomationTabs();
+
+
 
 // scroll reveal 
 ScrollReveal({
