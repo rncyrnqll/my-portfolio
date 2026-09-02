@@ -37,6 +37,75 @@ window.onscroll = () => {
 };
 
 
+// portfolio gallery data
+const projects = [
+    {
+        title: "QR Code Generator",
+        image: "images/qr-scan.png",
+        link: "https://github.com/rncyrnqll/QR-Code"
+    },
+    {
+        title: "Music Player",
+        image: "images/music.png",
+        link: "https://github.com/rncyrnqll/Music-Player"
+    },
+    {
+        title: "Weather App",
+        image: "images/weather.png",
+        link: "https://github.com/rncyrnqll/Weather-App"
+    },
+    {
+        title: "Expense Tracker",
+        image: "images/expense.png",
+        link: "https://github.com/rncyrnqll/Expense_Tracker"
+    },
+    {
+        title: "Calculator",
+        image: "images/calculator.png",
+        link: "https://github.com/rncyrnqll/calculator-app"
+    },
+    {
+        title: "Chat Bot",
+        image: "images/chat.png",
+        link: "https://github.com/rncyrnqll/chat_bot"
+    }
+];
+
+let currentProject = 0;
+
+function loadProject(index) {
+    currentProject = index;
+    let project = projects[index];
+
+    document.getElementById('galleryTitle').textContent = project.title;
+    document.getElementById('galleryCounter').textContent = "Image 1 of 1";
+    document.getElementById('galleryMainImg').src = project.image;
+    document.getElementById('galleryLink').href = project.link;
+
+    // update active tab styling
+    document.querySelectorAll('.gallery-tab').forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+    });
+}
+
+function buildTabs() {
+    let tabsContainer = document.getElementById('galleryTabs');
+
+    projects.forEach((project, index) => {
+        let tab = document.createElement('button');
+        tab.classList.add('gallery-tab');
+        tab.textContent = project.title;
+        tab.onclick = () => loadProject(index);
+        tabsContainer.appendChild(tab);
+    });
+
+    loadProject(0);
+}
+
+buildTabs();
+
+
+
 // scroll reveal 
 ScrollReveal({
   //  reset: true,
