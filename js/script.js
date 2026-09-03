@@ -118,7 +118,18 @@ const automationProjects = [
         images: [
             "images/zapier-content-summarizer.png"
         ]
-    }
+    },
+    {
+    title: "Lead Qualifier Bot",
+    images: [
+        "images/lead-qualifier-1.png",
+        "images/lead-qualifier-2.png",
+        "images/lead-qualifier-3.png",
+        "images/lead-qualifier-4.png",
+        "images/lead-qualifier-5.png",
+        "images/lead-qualifier-6.png"
+    ]
+}
 ];
 
 let currentAutomationProject = 0;
