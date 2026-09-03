@@ -759,3 +759,7 @@ span {
     opacity: 1;
     border-color: var(--main-color);
 }
+
+.automation-gallery {
+    background: var(--second-bg-color);
+}
