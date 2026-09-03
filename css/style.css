@@ -759,9 +759,10 @@ span {
     opacity: 1;
     border-color: var(--main-color);
 }
+
 .section-divider {
-    height: .1rem;
-    background: rgba(255, 255, 255, .1);
+    height: .2rem;
+    background: var(--main-color);
     max-width: 80%;
-    margin: 4rem auto 0;
+    margin: 4rem auto;
 }
