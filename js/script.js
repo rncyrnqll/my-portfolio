@@ -109,9 +109,14 @@ buildTabs();
 const automationProjects = [
     {
         title: "AI Email Auto-Responder",
-        link: "https://example.com",
         images: [
             "images/zapier-email-responder.png"
+        ]
+    },
+    {
+        title: "Content Summarizer",
+        images: [
+            "images/zapier-content-summarizer.png"
         ]
     }
 ];
@@ -137,7 +142,6 @@ function updateAutomationImage() {
     document.getElementById('automationCounter').textContent =
         "Image " + (currentAutomationImage + 1) + " of " + project.images.length;
     document.getElementById('automationMainImg').src = project.images[currentAutomationImage];
-    document.getElementById('automationLink').href = project.link;
 
     buildAutomationThumbs();
 }
