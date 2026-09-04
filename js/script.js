@@ -109,6 +109,7 @@ buildTabs();
 const automationProjects = [
     {
         title: "AI Email Auto-Responder",
+        description: "Built an AI-powered email automation using Zapier that reads incoming emails, generates a professional draft reply using AI, and filters out automated messages — reducing manual email triage time.",
         images: [
             "images/zapier-email-responder.png",
             "images/email-1.png",
@@ -119,6 +120,7 @@ const automationProjects = [
     },
     {
         title: "Content Summarizer",
+        description:"Created a Zapier automation that fetches article content from a URL and uses AI to generate a concise summary, automatically saving it to a Google Sheet — turning long articles into quick, scannable notes.",
         images: [
             "images/zapier-content-summarizer.png",
             "images/summary-1.png",
@@ -130,6 +132,7 @@ const automationProjects = [
     },
     {
     title: "Lead Qualifier Bot",
+    description:"Built an AI lead-scoring automation that reads form submissions, uses AI to rate lead quality (Hot/Warm/Cold), logs the result to a spreadsheet, and posts real-time alerts to Slack — automating a task typically done manually by sales teams.",
     images: [
         "images/lead-qualifier-1.png",
         "images/lead-qualifier-2.png",
@@ -160,6 +163,7 @@ function updateAutomationImage() {
     let project = automationProjects[currentAutomationProject];
 
     document.getElementById('automationTitle').textContent = project.title;
+    document.getElementById('automationDescription').textContent = project.description;
     document.getElementById('automationCounter').textContent =
         "Image " + (currentAutomationImage + 1) + " of " + project.images.length;
     document.getElementById('automationMainImg').src = project.images[currentAutomationImage];
