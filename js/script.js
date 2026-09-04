@@ -110,13 +110,22 @@ const automationProjects = [
     {
         title: "AI Email Auto-Responder",
         images: [
-            "images/zapier-email-responder.png"
+            "images/zapier-email-responder.png",
+            "images/email-1.png",
+            "images/email-2.png",
+            "images/email-3.png",
+            "images/email-4.png"
         ]
     },
     {
         title: "Content Summarizer",
         images: [
-            "images/zapier-content-summarizer.png"
+            "images/zapier-content-summarizer.png",
+            "images/summary-1.png",
+            "images/summary-2.png",
+            "images/summary-3.png",
+            "images/summary-4.png",
+            "images/summary-5.png"
         ]
     },
     {
@@ -127,7 +136,8 @@ const automationProjects = [
         "images/lead-qualifier-3.png",
         "images/lead-qualifier-4.png",
         "images/lead-qualifier-5.png",
-        "images/lead-qualifier-6.png"
+        "images/lead-qualifier-6.png",
+        "images/slack.png"
     ]
 }
 ];
