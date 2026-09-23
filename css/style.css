@@ -770,3 +770,29 @@ span {
     margin: 0 auto 1.5rem;
     color: #ccc;
 }
+@media print {
+  /* 1. Force colors, gradients, and images to appear */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 2. Hide web-only elements like navbars, buttons, and animations */
+  nav, .navbar, .nav-links, footer, button, .contact-form, .social-icons {
+    display: none !important;
+  }
+
+  /* 3. Stop project cards or sections from cutting in half */
+  section, .project-card, .card, .resume-item, img {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* 4. Fix layout scaling (prevents grids/flexbox from overflowing) */
+  body, main {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 12pt !important;
+  }
+}
